@@ -171,6 +171,7 @@ GameObject:
   - component: {fileID: 3083988940612551241}
   - component: {fileID: 3083988940612551246}
   - component: {fileID: 3083988940612551247}
+  - component: {fileID: 8644724991678168954}
   m_Layer: 0
   m_Name: Tank
   m_TagString: Untagged
@@ -259,6 +260,20 @@ MonoBehaviour:
   _shootParticles: {fileID: 2580144475230823019, guid: 750abed5f9663444a9294900da3faeb2,
     type: 3}
   _shootAudio: {fileID: 8300000, guid: 702ee2a52f61eff418238046e1f5c11b, type: 3}
+--- !u!114 &8644724991678168954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3083988940612551242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6a87d7521c2994cad7df0ff68cffc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 0
+  _currentHealth: 0
 --- !u!1 &3083988940702509505
 GameObject:
   m_ObjectHideFlags: 0
