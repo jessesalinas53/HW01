@@ -13,8 +13,6 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        //other.gameObject.GetComponent<IDamageable>();
-
         AudioHelper.PlayClip2D(_impactAudio, 1f);
         _impactParticles = Instantiate(_impactParticles, this.gameObject.transform.position, Quaternion.identity);
         Destroy(gameObject);

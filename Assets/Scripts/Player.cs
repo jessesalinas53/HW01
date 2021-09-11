@@ -20,11 +20,6 @@ public class Player : MonoBehaviour
         _tankController = GetComponent<TankController>();
     }
 
-    private void Start()
-    {
-
-    }
-
     private void Update()
     {
         Shoot();
