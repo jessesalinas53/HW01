@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2580144475230823019}
   - component: {fileID: 2580144475230823016}
   m_Layer: 0
-  m_Name: SpeedParticles
+  m_Name: ProjectileParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115,7 +115,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.1
+      scalar: 0.05
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -168,7 +168,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 20
+      scalar: 5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -221,8 +221,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.13821977, g: 0.38679248, b: 0.08027769, a: 1}
-      maxColor: {r: 0.8980392, g: 0.8039656, b: 0, a: 1}
+      minColor: {r: 0, g: 0, b: 0, a: 1}
+      maxColor: {r: 0.8980392, g: 0.35315117, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}

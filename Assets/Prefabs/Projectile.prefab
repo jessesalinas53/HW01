@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 090d592692fb3174a8c6f4b4f6eddac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _impactParticles: {fileID: 2580144475230823019, guid: 750abed5f9663444a9294900da3faeb2,
+  _impactParticles: {fileID: 2580144475230823019, guid: 5532ce751524ef04ebb2f1c2966c0e0d,
     type: 3}
   _impactAudio: {fileID: 8300000, guid: 5ebfa7387f8f6f54faf7ebc607a223e1, type: 3}
   _damParticles: {fileID: 2580144475230823019, guid: 4f0b57e2699941149a740352b83e56b5,
