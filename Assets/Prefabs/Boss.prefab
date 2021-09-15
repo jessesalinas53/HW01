@@ -387,6 +387,7 @@ MonoBehaviour:
     m_Bits: 256
   _maxDistFromWall: 5
   _turret: {fileID: 0}
+  _tank: {fileID: 0}
 --- !u!114 &7284906901302560408
 MonoBehaviour:
   m_ObjectHideFlags: 0
