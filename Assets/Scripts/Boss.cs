@@ -5,9 +5,9 @@ using UnityEngine.AI;
 
 public class Boss : MonoBehaviour
 {
-    [SerializeField] float _moveForce = 0f;
+    [SerializeField] public float _moveForce = 6f;
     private Rigidbody _rb;
-    [SerializeField] Vector3 _moveDir;
+    [SerializeField] public Vector3 _moveDir;
     [SerializeField] LayerMask _whatIsWall;
     [SerializeField] float _maxDistFromWall = 0f;
 

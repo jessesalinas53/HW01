@@ -10,14 +10,24 @@ public class Health : MonoBehaviour, IDamageable
     [SerializeField] ParticleSystem _killParticles;
     [SerializeField] AudioClip _killAudio;
 
+    public HealthBar healthBar;
+    public CameraShake cameraShake;
+
+    [SerializeField] FlashImage _flashImage = null;
+    [SerializeField] Color _newColor = Color.red;
+
     public void TakeDamage(int amount)
     {
         _currentHealth -= amount;
+        healthBar.SetHealth(_currentHealth);
 
         if (_currentHealth <= 0)
         {
             Kill();
         }
+
+        StartCoroutine(cameraShake.Shake(.15f, .3f));
+        _flashImage.StartFlash(.25f, .5f, Color.red);
     }
 
     void Kill()

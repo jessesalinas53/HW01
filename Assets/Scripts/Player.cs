@@ -33,7 +33,8 @@ public class Player : MonoBehaviour
             {
                 _nextFire = Time.time + _fireRate;
                 AudioHelper.PlayClip2D(_shootAudio, 1f);
-                _shootParticles = Instantiate(_shootParticles, _projectileSpawn.position, Quaternion.identity);
+                ParticleSystem _shootParticlesClone = Instantiate(_shootParticles, _projectileSpawn.position, Quaternion.identity);
+                Destroy(_shootParticlesClone, 1f);
 
                 Rigidbody _projectileClone = Instantiate(_projectileRB, _projectileSpawn.position, Quaternion.identity) as Rigidbody;
                 _projectileClone.AddForce(transform.forward * 1600f);
