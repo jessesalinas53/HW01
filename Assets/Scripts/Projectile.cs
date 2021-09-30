@@ -15,7 +15,8 @@ public class Projectile : MonoBehaviour
     {
         AudioHelper.PlayClip2D(_impactAudio, 1f);
         ParticleSystem newImpactParticles = Instantiate(_impactParticles, this.gameObject.transform.position, Quaternion.identity);
-        //Destroy(newImpactParticles);
+
+        Destroy(this.gameObject);
 
         Health health = other.collider.GetComponent<Health>();
 
@@ -28,6 +29,5 @@ public class Projectile : MonoBehaviour
             ParticleSystem _damParticlesClone = Instantiate(_damParticles, this.gameObject.transform.position, Quaternion.identity);
             Destroy(_damParticlesClone);
         }
-        Destroy(gameObject);
     }
 }

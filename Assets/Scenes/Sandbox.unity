@@ -1778,6 +1778,11 @@ PrefabInstance:
       propertyPath: _tank
       value: 
       objectReference: {fileID: 116508617}
+    - target: {fileID: 2744143315860085222, guid: 77486f8865aa4bf41ba75102748097be,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2744143317593492436, guid: 77486f8865aa4bf41ba75102748097be,
         type: 3}
       propertyPath: m_IsActive
@@ -1837,6 +1842,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2744143317633835102, guid: 77486f8865aa4bf41ba75102748097be,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.5085281
+      objectReference: {fileID: 0}
+    - target: {fileID: 2744143317633835102, guid: 77486f8865aa4bf41ba75102748097be,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 1.4013709
+      objectReference: {fileID: 0}
+    - target: {fileID: 2744143317633835102, guid: 77486f8865aa4bf41ba75102748097be,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0.029539539
+      objectReference: {fileID: 0}
+    - target: {fileID: 2744143317633835102, guid: 77486f8865aa4bf41ba75102748097be,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.02421105
       objectReference: {fileID: 0}
     - target: {fileID: 2744143317633835103, guid: 77486f8865aa4bf41ba75102748097be,
         type: 3}
