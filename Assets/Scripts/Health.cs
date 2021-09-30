@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class Health : MonoBehaviour, IDamageable
+public class Health : MonoBehaviour
 {
-    [SerializeField] float _maxHealth = 10;
     [SerializeField] float _currentHealth = 10;
 
     [SerializeField] ParticleSystem _killParticles;
@@ -16,10 +16,16 @@ public class Health : MonoBehaviour, IDamageable
     [SerializeField] FlashImage _flashImage = null;
     [SerializeField] Color _newColor = Color.red;
 
-    public void TakeDamage(int amount)
+    public UnityEvent TakeDamage;
+
+    public void Damaged(int amount)
     {
+        Debug.Log("Took " + amount + " damage");
+
         _currentHealth -= amount;
         healthBar.SetHealth(_currentHealth);
+
+        TakeDamage?.Invoke();
 
         if (_currentHealth <= 0)
         {
@@ -32,8 +38,10 @@ public class Health : MonoBehaviour, IDamageable
 
     void Kill()
     {
+        Debug.Log("Kill");
         AudioHelper.PlayClip2D(_killAudio, 1f);
-        _killParticles = Instantiate(_killParticles, this.gameObject.transform.position, Quaternion.identity);
+        ParticleSystem newKillParticles = Instantiate(_killParticles, this.gameObject.transform.position, Quaternion.identity);
+        Destroy(newKillParticles);
         Destroy(gameObject);
     }
 }

@@ -32,7 +32,9 @@ public class Player : MonoBehaviour
             if(Time.time > _nextFire)
             {
                 _nextFire = Time.time + _fireRate;
+
                 AudioHelper.PlayClip2D(_shootAudio, 1f);
+
                 ParticleSystem _shootParticlesClone = Instantiate(_shootParticles, _projectileSpawn.position, Quaternion.identity);
                 Destroy(_shootParticlesClone, 1f);
 

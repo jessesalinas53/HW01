@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6c9c8105b2be9344799a1a022af84401, type: 2}
+  - {fileID: 2100000, guid: 9f6d44d13464a9e4ea45f1ce1d5c2fb2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -129,3 +129,4 @@ MonoBehaviour:
   _damParticles: {fileID: 2580144475230823019, guid: 4f0b57e2699941149a740352b83e56b5,
     type: 3}
   _damAudio: {fileID: 8300000, guid: 0ddc8dc0111911e4c91bc37b71ee7bb5, type: 3}
+  _damAmount: 5

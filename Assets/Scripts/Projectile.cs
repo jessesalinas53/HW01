@@ -9,20 +9,24 @@ public class Projectile : MonoBehaviour
     [SerializeField] ParticleSystem _damParticles;
     [SerializeField] AudioClip _damAudio;
 
-    int _damAmount = 1;
+    [SerializeField] int _damAmount = 2;
 
     private void OnCollisionEnter(Collision other)
     {
         AudioHelper.PlayClip2D(_impactAudio, 1f);
-        _impactParticles = Instantiate(_impactParticles, this.gameObject.transform.position, Quaternion.identity);
-        //Destroy(gameObject);
+        ParticleSystem newImpactParticles = Instantiate(_impactParticles, this.gameObject.transform.position, Quaternion.identity);
+        //Destroy(newImpactParticles);
 
-        if(other.gameObject.GetComponent<Health>() != null)
+        Health health = other.collider.GetComponent<Health>();
+
+        if(health != null)
         {
-            other.gameObject.GetComponent<Health>().TakeDamage(_damAmount);
+            health.Damaged(_damAmount);
+
             AudioHelper.PlayClip2D(_damAudio, 1f);
+
             ParticleSystem _damParticlesClone = Instantiate(_damParticles, this.gameObject.transform.position, Quaternion.identity);
-            Destroy(_damParticlesClone, 1f);
+            Destroy(_damParticlesClone);
         }
         Destroy(gameObject);
     }
